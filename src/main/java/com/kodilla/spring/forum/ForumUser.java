@@ -7,7 +7,7 @@ public class ForumUser {
     private String username;
 
 
-    public ForumUser(String username){
+    public ForumUser(){
         this.username = "John Smith";
     }
 
