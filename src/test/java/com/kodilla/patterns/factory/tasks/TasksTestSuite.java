@@ -13,7 +13,8 @@ public class TasksTestSuite {
 
         TaskFactory task = new TaskFactory();
         Tasks driving = task.makeTasks(TaskFactory.DRIVING);
-        boolean result = driving.isTaskExecuted(driving);
+        driving.executeTask();
+        boolean result = driving.isTaskExecuted();
 
         Assert.assertEquals(true,result);
 

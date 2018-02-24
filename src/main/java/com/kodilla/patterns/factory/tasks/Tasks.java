@@ -4,6 +4,6 @@ public interface Tasks {
 
     String executeTask();
     String getTaskName();
-    boolean isTaskExecuted(Tasks tasks);
+    boolean isTaskExecuted();
 
 }

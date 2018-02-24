@@ -4,7 +4,6 @@ public class ShoppingTask implements Tasks{
     private String taskName;
     private String whatToBuy;
     private double quantity;
-    private static Tasks sTask = null;
     private boolean execute = false;
 
     public ShoppingTask(String taskName, String whatToBuy, double quantity) {
@@ -15,6 +14,7 @@ public class ShoppingTask implements Tasks{
 
     @Override
     public String executeTask(){
+        this.execute = true;
         return "Task type: " + this.taskName + " to buy " + this.whatToBuy + " in amount of " + this.quantity;
     }
     @Override
@@ -22,9 +22,6 @@ public class ShoppingTask implements Tasks{
         return this.taskName;
     }
     @Override
-    public boolean isTaskExecuted(Tasks sTask){
-        if(sTask!=null){
-            execute = true;
-        }
+    public boolean isTaskExecuted(){
         return execute;}
 }

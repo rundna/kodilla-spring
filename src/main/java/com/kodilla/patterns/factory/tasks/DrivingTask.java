@@ -5,7 +5,6 @@ public class DrivingTask implements Tasks{
     private String taskName;
     private String where;
     private String using;
-    private static Tasks dTask = null;
     private boolean execute=false;
 
     public DrivingTask(String taskName, String where, String using) {
@@ -15,6 +14,7 @@ public class DrivingTask implements Tasks{
     }
     @Override
     public String executeTask(){
+        execute = true;
         return "Task type: " + this.taskName + "to " + this.where + " using " + this.using;
     }
     @Override
@@ -22,9 +22,6 @@ public class DrivingTask implements Tasks{
        return this.taskName;
     }
     @Override
-    public boolean isTaskExecuted(Tasks dTask){
-        if(dTask!=null){
-            execute = true;
-        }
+    public boolean isTaskExecuted(){
     return execute;}
 }
