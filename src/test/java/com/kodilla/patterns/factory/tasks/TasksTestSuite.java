@@ -11,26 +11,28 @@ public class TasksTestSuite {
         //boolean result = dTask.isTaskExecuted(dTask);
         //System.out.println(result);
 
-        TaskFactory task = new TaskFactory();
-        Tasks driving = task.makeTasks(TaskFactory.DRIVING);
-        driving.executeTask();
-        boolean result = driving.isTaskExecuted();
+        TaskFactory taskFactory = new TaskFactory();
+        Tasks task = taskFactory.makeTasks(TaskFactory.DRIVING);
+        task.executeTask();
+        boolean result = task.isTaskExecuted();
 
         Assert.assertEquals(true,result);
 
     }
     @Test
     public void testTaskName(){
-        TaskFactory task = new TaskFactory();
-        Tasks painting = task.makeTasks(TaskFactory.PAINTING);
-        Assert.assertEquals("Paint it black",painting.getTaskName());
+        TaskFactory taskFactory = new TaskFactory();
+        Tasks task = taskFactory.makeTasks(TaskFactory.PAINTING);
+        task.executeTask();
+        Assert.assertTrue(task.executeTask().contains("Paint it black"));
+        Assert.assertEquals("Paint it black",task.getTaskName());
     }
 
     @Test
     public void testTaskExecution(){
-        TaskFactory task = new TaskFactory();
-        Tasks shoping = task.makeTasks(TaskFactory.SHOPPING);
-        Assert.assertEquals("Task type: Pink Floyd's amazon song to buy Money in amount of 2.0", shoping.executeTask());
+        TaskFactory taskFactory = new TaskFactory();
+        Tasks task = taskFactory.makeTasks(TaskFactory.SHOPPING);
+        Assert.assertEquals("Task type: Pink Floyd's amazon song to buy Money in amount of 2.0", task.executeTask());
 
     }
 }
