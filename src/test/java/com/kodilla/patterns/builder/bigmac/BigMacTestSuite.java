@@ -10,7 +10,7 @@ public class BigMacTestSuite {
                                     .roll("roll with sesame")
                                     .burgers("double heart stroke beef")
                                     .sauce("1000 island double dip")
-                                    .ingredients("pickle")
+                                    .ingredients("pickled cucumber")
                                     .ingredients("tomato")
                                     .ingredients("double cheese")
                                     .ingredients("lettuce leaves")
