@@ -29,7 +29,7 @@ public class TaskListDaoTestSuite {
         //System.out.println(task.toString());
         Assert.assertEquals(1, taskClone.size());
 
-        taskListDao.deleteAll();
+        //taskListDao.deleteAll();
     }
 }
 
